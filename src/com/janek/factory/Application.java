@@ -5,8 +5,12 @@ package com.janek.factory;
  */
 public class Application {
     public static void main(String[] args) {
-        AudiCarFactory audiCarFactory = new AudiCarFactory();
-        Car car = audiCarFactory.buildCar("a3");
+        AbstractCarFactory abstractCarFactory = new AbstractCarFactory();
+        Car car = abstractCarFactory.buildAudiCar("a3");
+        Car car2 = abstractCarFactory.buildBMWCar("x5");
+        Car car3 = abstractCarFactory.buildMercedesCar("s600");
+//        AudiCarFactory audiCarFactory = new AudiCarFactory();
+//        Car car = audiCarFactory.buildCar("a3");
 //        Engine audiEngine = new Engine(200,3000,"diesel");
 //        Wheels audiWheels = new Wheels(18,"summer");
 //        Audi audi = new Audi(audiEngine,audiWheels,"a3");
